@@ -6,9 +6,9 @@ let context = canvas.getContext("2d");
 drawLines(); 
 function drawLines(){
 
-let marginX= 50;
+let marginX= 100;
 
-let marginY = 50;
+let marginY = 100;
 let marginRight = window.innerWidth-marginX;
 
 let marginBottom = window.innerHeight-marginY;
