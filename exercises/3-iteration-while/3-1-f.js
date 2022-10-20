@@ -12,9 +12,11 @@ function draw() {
 }
 
 function drawDiagonalSquares() {
-    let i = ;
-    while () {
-        context.strokeRect(,,,);
-        i = ;
+    let i = 0;
+    let step= 25;
+    let offset= 75;
+    while (i < 7) {
+        context.strokeRect(offset+step*i,offset+step*i,100,100);
+        i++;
     }
 }
