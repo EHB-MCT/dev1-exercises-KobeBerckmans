@@ -21,8 +21,8 @@ export function rgb(r, g, b) {
 
 export function strokeCircle(x, y, radius) {
 context.beginPath();
-context.ellipse(x, y, radius, radius,0,0,Math.PI*2);
-context.stroke();
+context.ellipse(x, y, radius, radius);
+
 }
 
 //x, y, rX, rY
@@ -41,3 +41,4 @@ export function fillEllipse(x,y,rX,rY){
     context.stroke();
 
 }
+
