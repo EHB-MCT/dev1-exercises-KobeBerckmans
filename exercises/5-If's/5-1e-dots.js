@@ -25,8 +25,7 @@ function drawCircles(){
         else {
             context.fillStyle = "white";
         }
-        context.beginPath();
-        context.ellipse(circleX,circleY,dotRadius,dotRadius,Math.PI,0,2*Math.PI);
+        Utils.fillEllipse(circleX,circleY,dotRadius,dotRadius);
         context.fill();
         
     }

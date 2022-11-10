@@ -42,3 +42,14 @@ export function fillEllipse(x,y,rX,rY){
 
 }
 
+export function hsla(h, s, l, a) {
+    return "hsl(" + h + "," + s + "%," + l + "%," + a + "%)";
+}
+export function hsl(h, s, l) {
+    return "hsl(" + h + "," + s + "%," + l + "%)";
+}
+
+export function drawRect(x,y,x1,y2) {
+context.fillRect(x, y, x1, y2);
+context.fillStyle = "rgb(x, x, x,)";
+}

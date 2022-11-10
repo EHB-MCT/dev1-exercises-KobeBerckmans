@@ -12,21 +12,19 @@ function background(){
 context.fillStyle = "black";
 context.fillRect(0,0,screenWidth, screenHeight);
 }
-drawCircles();
-function drawCircles(){
-    for(let i=0;i<=10000;i++){
-        let circleX = Math.random()*screenWidth;
-        let circleY = Math.random()*screenHeight;
-        if(circleX > (screenWidth/4)*3 || circleX < screenWidth/4 || circleY > (screenHeight/4)*3 || circleY < screenHeight/4){
-            context.fillStyle = "blue";
-        
-        }
-       
-        else {
+drawDots();
+
+function drawDots() {
+
+    for (let i = 0; i < 10000; i++) {
+        let x = Math.random() * width;
+        let y = Math.random() * height;
+        let distance = Utils.calculateDistance(width / 2, height / 2, x, y);
+        if (distance < 50 || distance > 100) {
             context.fillStyle = "white";
+        } else {
+            context.fillStyle = "red";
         }
-        Utils.fillEllipse(circleX,circleY,dotRadius,dotRadius);
-        context.fill();
-        
+        Utils.fillCircle(x, y, 5);
     }
 }
