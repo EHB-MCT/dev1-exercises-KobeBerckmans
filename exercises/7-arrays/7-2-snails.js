@@ -36,8 +36,12 @@ function setup() {
 }
 
 function draw() {
-    let space = height / 5;
-    drawSnail(space / 2, space / 2, space, 1);
+    
+    for(let i = 1; i < 6; i++ ){
+        let space = height / 5;
+        let between = -25;
+    drawSnail(space / 2 ,  space * i + between, space , 0+i);
+}
 }
 
 function drawSnail(x, y, sizeY, number) {
