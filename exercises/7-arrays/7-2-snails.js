@@ -8,6 +8,25 @@ let height = context.canvas.height;
 
 
 
+background();
+
+function background(){
+    let space = height/5;
+
+    context.fillStyle = "lightgray";
+    context.fillRect(0, 0, width, height);
+
+
+    context.fillStyle = 'gray';
+    context.fillRect(0, space*2, width, height/5);
+
+    context.fillStyle = 'gray';
+    context.fillRect(0, 0, width, height/5);
+
+    context.fillStyle = 'gray';
+    context.fillRect(0, space*4, width, height/5);
+    
+}
 setup();
 draw();
 
@@ -47,16 +66,3 @@ function drawSnail(x, y, sizeY, number) {
     context.fillText(number, x, y + sizeY / 8);
 }
 
-background();
-
-function background(){
-    for(let i=0;i<=5;i++){
-        let rectangle = height/5;
-        let step= height/5;
-        context.fillRect(0, 0 + (step), width, height/5);
-        if(rectangle < height){
-            context.fillStyle = "grey";
-    }
-
-}
-}
